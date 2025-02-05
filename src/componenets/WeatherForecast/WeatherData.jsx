@@ -1,12 +1,12 @@
 
-const WeatherData = () => {
+const WeatherData = (props) => {
   
 
     return (
         <>
-        <h2>Day of the Week</h2>
-        <p><span>conditions: </span>current weather conditions</p>
-        <p><span>time: </span>time of day</p>
+            <h2>{props.day}</h2>
+            <p><span>conditions: </span>{props.conditions}</p>
+            <p><span>time: </span>{props.time}</p>
         </>
     );
   }

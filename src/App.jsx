@@ -48,15 +48,18 @@ const App = () => {
   
 
   return (
-    weatherForecasts.map((weather) => 
-    <div key={weather.day}>
+    <>
     <h1>Local Weather</h1>
 
-    <section>
+    {weatherForecasts.map((weather) => 
+    <div key={weather.day}>
+
+    <section>    
       <WeatherForecast day={weather.day} img={weather.img} imgAlt={weather.imgAlt} conditions={weather.conditions} time={weather.time} />
     </section>
   </div>
-    )
+)}
+  </>
   );
 }
 
